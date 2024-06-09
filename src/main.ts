@@ -1,7 +1,10 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { appConfig } from './app/app.config';
+import { AppComponent } from './app/app.component';
+import {setupWorker} from 'msw/browser';
+import { mockHandlers } from './mocks';
 
-import { AppModule } from './app/app.module';
+setupWorker(...mockHandlers).start()
+  .then(() => bootstrapApplication(AppComponent, appConfig))
+  .catch((err) => console.error(err));
 
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));

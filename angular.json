@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "certification-project-ev": {
+    "ng-job-search": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,18 +11,19 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/certification-project-ev",
+            "outputPath": "dist/ng-job-search",
             "index": "src/index.html",
-            "main": "src/main.ts",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/mockServiceWorker.js"
             ],
             "styles": [
               "src/styles.css"
@@ -46,12 +47,9 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -60,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "certification-project-ev:build:production"
+              "buildTarget": "ng-job-search:build:production"
             },
             "development": {
-              "browserTarget": "certification-project-ev:build:development"
+              "buildTarget": "ng-job-search:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "certification-project-ev:build"
+            "buildTarget": "ng-job-search:build"
           }
         },
         "test": {
