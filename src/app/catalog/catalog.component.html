@@ -1,0 +1,8 @@
+<div *ngIf="jobItems.length === 0">
+    You have no items in your cart
+</div>
+<ul *ngIf="jobItems.length > 0">
+    <li *ngFor="let job of jobItems" class="jobItem">
+        <app-job [job]="job"></app-job>
+    </li>
+</ul>

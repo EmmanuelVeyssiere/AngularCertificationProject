@@ -1,0 +1,20 @@
+<div class="jobDetails">
+    <div class="jobDetailsLeft">
+        <div>
+            <img class="logoImg"  [src]="job.companyLogo" alt="Company Logo">
+        </div>
+        <div>
+            <div class="title">
+                {{job.title}}
+            </div>
+            <div>
+                <div>
+                    Company:{{job.companyName}}   Reference:{{job.reference}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="star">
+        <span class="icon-star" id="star-{{job.id}}"></span>
+    </div>
+</div>
