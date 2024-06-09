@@ -1,0 +1,8 @@
+<div class="emptyFav" *ngIf="favJobItems.length === 0">
+    No favorite selected
+</div>
+<ul *ngIf="favJobItems.length > 0">
+    <li *ngFor="let job of favJobItems" class="jobItem">
+        <app-job [job]="job" [showStar]="false"></app-job>
+    </li>
+</ul>

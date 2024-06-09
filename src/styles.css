@@ -30,3 +30,10 @@ ul li {
     margin: 0 3px;
     width: 50%;
 }
+body{
+    background-color: white;
+}
+
+.jobItem{
+    align-content: center;
+}

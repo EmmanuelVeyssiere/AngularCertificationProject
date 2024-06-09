@@ -14,7 +14,7 @@
             </div>
         </div>
     </div>
-    <div class="star">
-        <span class="icon-star" id="star-{{job.id}}"></span>
+    <div class="star" (click)="setFavorite()" *ngIf="showStar">
+        <span class="icon-star" [ngClass]="{ active: favorite }" id="star-{{job.id}}"></span>
     </div>
 </div>

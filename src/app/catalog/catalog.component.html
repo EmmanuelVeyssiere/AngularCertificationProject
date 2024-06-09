@@ -1,8 +1,8 @@
 <div *ngIf="jobItems.length === 0">
-    You have no items in your cart
+    There is no job displayed
 </div>
 <ul *ngIf="jobItems.length > 0">
     <li *ngFor="let job of jobItems" class="jobItem">
-        <app-job [job]="job"></app-job>
+        <app-job [job]="job" [showStar]="true"></app-job>
     </li>
 </ul>
