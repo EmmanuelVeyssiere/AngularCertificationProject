@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { JobService } from '../job/job.service';
 import { IJobDetail } from './job-detail.model';
 import { ActivatedRoute, RouterModule } from '@angular/router';
