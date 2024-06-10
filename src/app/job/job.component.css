@@ -10,15 +10,13 @@
     flex-direction: row;
 }
 
-.logoImg {
-    height: 50px;
-    margin-right: 30px;
-}
 
-.title {
-    font-weight: bold;
-}
 .star{
     width: 50px;
 
+}
+
+
+.title {
+    font-weight: bold;
 }

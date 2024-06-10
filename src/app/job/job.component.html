@@ -4,12 +4,12 @@
             <img class="logoImg"  [src]="job.companyLogo" alt="Company Logo">
         </div>
         <div>
-            <div class="title">
+            <a routerLink="/jobs/{{job.id}}" class="title">
                 {{job.title}}
-            </div>
+            </a>
             <div>
                 <div>
-                    Company:{{job.companyName}}   Reference:{{job.reference}}
+                    <span style="margin-right: 30px;">Company: {{job.companyName}}</span> Reference: {{job.reference}}
                 </div>
             </div>
         </div>

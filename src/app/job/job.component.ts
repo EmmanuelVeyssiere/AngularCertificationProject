@@ -2,11 +2,12 @@ import { Component, Input, OnInit } from '@angular/core';
 import { IJob } from './job.model';
 import { NgClass, NgIf } from '@angular/common';
 import { FavoriteService } from '../favorite/favorite.service';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-job',
   standalone: true,
-  imports: [NgClass, NgIf],
+  imports: [NgClass, NgIf, RouterModule],
   templateUrl: './job.component.html',
   styleUrl: './job.component.css'
 })

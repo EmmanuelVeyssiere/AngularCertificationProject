@@ -1,0 +1,26 @@
+<div class="detail-container">
+    <div class="back-container">
+        
+        <button style="display: flex; flex-direction: row;" routerLink="/jobs"><img style="width: 23px;" src="assets/home.png" alt="home icone">Back</button>
+    </div>
+    <div class="detail">
+        <div>
+            <img class="logoImg" [src]="currentJobDetail?.companyLogo" alt="Company Logo">
+        </div>
+        <div>
+            <div class="title">
+                {{currentJobDetail?.companyName}} - {{currentJobDetail?.title}}
+            </div>
+            <div class="types">
+                <div class="type" *ngFor="let type of currentJobDetail?.types">{{type}}</div>
+                <div class="type" *ngFor="let industries of currentJobDetail?.industries" [innerHTML]="industries"></div>
+            </div>
+        </div>
+    </div>
+    <div class="infos">
+        <div><span class="title-2">Publish date: </span><span>{{currentJobDetail?.publishDate|date:'M/d/yy'}}</span></div>
+        <div><span class="title-2">Location: </span><span>{{currentJobDetail?.location}}</span></div>
+        <div><span class="title-2">Reference: </span> <span>{{currentJobDetail?.reference}}</span></div>
+        <div><span class="title-2">Description: </span><div [innerHTML]="currentJobDetail?.description"></div></div>
+    </div>
+</div>

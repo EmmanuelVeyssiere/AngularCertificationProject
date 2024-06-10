@@ -1,11 +1,16 @@
 .active{
     background-color: darkgrey;
+    color: white;
+}
+a{
+    text-decoration: none;
 }
 .header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 .header-option{
     width: 50%;
